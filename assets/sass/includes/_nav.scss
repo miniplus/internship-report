@@ -1,0 +1,90 @@
+.nav-container {
+	overflow: hidden;
+	height: emCalc(60px);
+	width: 100%;
+	background: $black;
+	color: $body-bg;
+	position: static;
+	z-index: 1;
+	border-top: 3px solid $green;
+	@include single-transition();
+	a {
+		&:hover {
+			border-bottom: none;
+		}
+	}
+	.btn {
+		float: right;
+		position: relative;
+		z-index: 1;
+		color: $body-bg;
+		margin: emCalc(12px) emCalc(10px) 0;
+		background: $green;
+		padding: emCalc(5px) emCalc(5px) emCalc(0px);
+		@include border-radius(4px);
+	}
+
+	.nav-branch {
+		display: none;
+		@include opacity(0);
+		@include single-transition();
+		&.show {
+			@include opacity(1);
+		}
+	}
+	.month {
+		color: $green;
+	}
+}
+
+.measure-timeline {
+	margin: emCalc(25px) emCalc(20px) emCalc(55px) emCalc(30px);
+}
+
+.origin {
+	margin: emCalc(15px) 0 0 emCalc(20px);
+}
+
+.timeline {
+	width: emCalc(2px);
+	position: relative;
+}
+
+.commit {
+	width: emCalc(2px);	
+	height: emCalc(60px);
+	background: $timelineColour;
+	position: relative;
+	&:last-child {
+		background: none;
+		margin-bottom: 0;
+	}
+	a {
+		text-align: left;
+		line-height: emCalc(34px);
+	}
+	.dot {
+		width: emCalc(30px);
+		height: emCalc(30px);
+		background: $green;
+		text-align: center;
+	}
+	.dot-wrapper {
+		position: absolute;
+		top: 0;
+		left: emCalc(-14px);
+	}
+	&.singleline {
+		height: emCalc(80px);
+	}
+	&.multiline {
+		height: emCalc(160px);
+	}
+}
+
+.text {
+	font-weight: 100;
+	position: absolute;
+	left: 30px;
+	white-space: nowrap;
+}

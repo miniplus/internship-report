@@ -1,0 +1,224 @@
+@media print {
+	
+	body {
+		font-size: 16px;
+	}
+
+	.nav-container {
+		display: none;
+	}
+
+	.container{
+		max-width: none;
+	}
+
+	section {
+		&.row {
+			&:first-child {
+				margin-top: emCalc(60px);
+				border-top: 1px solid $lightGray;
+			}
+		}
+		.skills {
+			margin-top: emCalc(40px);
+			.name {
+				font-size: emCalc(16px);;
+			}
+		}
+	}
+
+	.branch {
+		font-size: emCalc(50px);
+	}
+
+	.skill {
+		display: inline-block;
+		width: 20%;
+		margin-right: 5%;
+		&:nth-child(4n+4) {
+			margin-right: 0;
+		}
+	}
+
+ 	.level-wrap, .level {
+ 		height: emCalc(10px);
+ 		@include border-radius(10px);
+ 	}
+
+	.level-wrap {
+ 		background: $lightGray;	
+	}
+
+	.level {
+		background: $green;
+	}
+
+	.html {
+			width: 100%;
+	}
+	
+	.sass {
+			width: 90%;
+	}
+	
+	.less {
+			width: 85%;
+	}
+	
+	.jquery {
+			width: 80%;
+	}
+	
+	.coffeescript {
+			width: 60%;
+	}
+	
+	.extjs {
+			width: 65%;
+	}
+	
+	.backbonejs {
+			width: 40%;
+	}
+	
+	.nodejs {
+			width: 30%;
+	}
+	
+	.php {
+			width: 70%;
+	}
+	
+	.smarty {
+			width: 80%;
+	}
+	
+	.zend {
+			width: 40%;
+	}
+	
+	.mysql {
+			width: 80%;
+	}
+	
+	.ruby {
+			width: 20%;
+	}
+	
+	.git {
+			width: 75%;
+	}
+	
+	.api-fb {
+			width: 70%;
+	}
+	
+	.api-twitter {
+			width: 75%;
+	}
+	
+	.api-instagram {
+			width: 80%;
+	}
+	
+	.joomla {
+			width: 75%;
+	}
+	
+	.wordpress {
+			width: 50%;
+	}
+	
+	.inventis-cms {
+			width: 75%;
+	}
+	
+	.fork {
+			width: 20%;
+	}
+	
+	.photoshop {
+			width: 90%;
+	}
+	
+	.illustrator {
+			width: 80%;
+	}
+	
+	.indesign {
+			width: 80%;
+	}
+	
+	.flash {
+			width: 80%;
+	}
+	
+	.premiere {
+			width: 75%;
+	}
+	
+	.after-effects {
+			width: 65%;
+	}
+	
+	.dutch {
+			width: 100%;
+	}
+	
+	.english {
+			width: 90%;
+	}
+	
+	.french {
+			width: 60%;
+	}
+	
+	.german {
+			width: 20%;
+	}
+
+	footer {
+		display: none;
+	}
+
+	//Grid style
+    .row {
+      &.collapse {
+        .column,
+        .columns { @include grid-column($collapse:true); }
+      }
+    }
+
+    .column,
+    .columns { @include grid-column($columns:$total-columns); }
+    
+    @for $i from 1 through $total-columns {
+      .large#{-$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+    }
+
+    @for $i from 1 through $total-columns - 1 {
+      .row .large-offset-#{$i} { @include grid-column($offset:$i, $collapse:null,$float:false); }
+    }
+
+    @for $i from 1 through $total-columns - 1 {
+      .push#{-$i} { @include grid-column($push:$i, $collapse:null, $float:false); }
+      .pull#{-$i} { @include grid-column($pull:$i, $collapse:null, $float:false); }
+    }
+
+    @for $i from 1 through $total-columns - 1 {
+      .small-push#{-$i} { #{$default-float}: inherit; }
+      .small-pull#{-$i} { #{$opposite-direction}: inherit; }
+    }
+
+    .column.small-centered,
+    .columns.small-centered {
+      margin-#{$default-float}: 0;
+      margin-#{$opposite-direction}: 0;
+      float: $default-float;
+    }
+
+    .column.large-centered,
+    .columns.large-centered { @include grid-column($center:true, $collapse:null, $float:false);
+    }
+
+}

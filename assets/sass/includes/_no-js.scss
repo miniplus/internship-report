@@ -1,0 +1,161 @@
+.no-js {
+	
+	.nav-container {
+		height: auto;
+		@media #{$small} {
+			height: 100%;
+		}
+	}
+
+	.btn {
+		display: none;
+	}
+
+	.commit {
+		display: block;
+		@include opacity(1);
+	}
+
+	.head {
+		height: emCalc(60px);
+
+		@media #{$small} {
+			height: emCalc(80px);
+		}
+	}
+
+	.skill {
+		@media #{$large} {
+			width: 19%;
+			margin-right: 7%;
+			&:nth-child(4n+4) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.html {
+		width: 100%;
+	}
+
+	.sass {
+		width: 90%;
+	}
+
+	.less {
+		width: 85%;
+	}
+
+	.jquery {
+		width: 80%;
+	}
+
+	.coffeescript {
+		width: 60%;
+	}
+
+	.extjs {
+		width: 65%;
+	}
+
+	.backbonejs {
+		width: 40%;
+	}
+
+	.nodejs {
+		width: 30%;
+	}
+
+	.php {
+		width: 70%;
+	}
+
+	.smarty {
+		width: 80%;
+	}
+
+	.zend {
+		width: 40%;
+	}
+
+	.mysql {
+		width: 80%;
+	}
+
+	.ruby {
+		width: 20%;
+	}
+
+	.git {
+		width: 75%;
+	}
+
+	.api-fb {
+		width: 70%;
+	}
+
+	.api-twitter {
+		width: 75%;
+	}
+
+	.api-instagram {
+		width: 80%;
+	}
+
+	.joomla {
+		width: 75%;
+	}
+
+	.wordpress {
+		width: 50%;
+	}
+
+	.inventis-cms {
+		width: 75%;
+	}
+
+	.fork {
+		width: 20%;
+	}
+
+	.photoshop {
+		width: 90%;
+	}
+
+	.illustrator {
+		width: 80%;
+	}
+
+	.indesign {
+		width: 80%;
+	}
+
+	.flash {
+		width: 80%;
+	}
+
+	.premiere {
+		width: 75%;
+	}
+
+	.after-effects {
+		width: 65%;
+	}
+
+	.dutch {
+		width: 100%;
+	}
+
+	.english {
+		width: 90%;
+	}
+
+	.french {
+		width: 60%;
+	}
+
+	.german {
+		width: 20%;
+	}
+
+}

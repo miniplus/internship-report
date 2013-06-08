@@ -1,0 +1,35 @@
+@media #{$large} {
+
+	.branch {
+		margin-bottom: emCalc(20px);
+		.icon {
+			display: inline;
+		}
+	}
+
+	section {
+		.skills {
+			margin-top: emCalc(50px);
+		}
+	}
+
+	.skill {
+		display: inline-block;
+		width: 20%;
+		margin-right: 6%;
+		&:nth-child(4n+4) {
+			margin-right: 0;
+		}
+	}
+
+	#education {
+		.block-item {
+			margin-bottom: 0;
+		}
+	}
+
+	.info {
+		margin-top: emCalc(20px);
+	}	
+
+}

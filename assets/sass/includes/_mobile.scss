@@ -1,0 +1,455 @@
+html, body {
+	color: $black;
+	height: 100%;
+}
+
+sup {
+	font-size: 0.8em;
+	vertical-align: top;
+}
+
+h1, h2,
+.header1, .header2 {
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+}
+
+h3,
+.header3 {
+	font-family: $subheader-font-family;
+	font-weight: $subheader-font-weight;
+	font-style: $subheader-font-style;
+	color: $gray;
+}
+
+h1,
+.header1 {
+	font-size: $h1-font-size;
+	margin-bottom: emCalc(15px);
+}
+
+h2,
+.header2 {
+	font-size: $h2-font-size;
+}
+
+h3,
+.header3 {
+	margin-bottom: emCalc(20px);
+}
+
+h4,
+.header4 {
+	color: $green;
+}
+
+strong {
+	font-weight: bold;
+}
+
+p {
+	margin-bottom: emCalc(30px);
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	color: $green;
+	text-decoration: none;
+
+	&:visited {
+		color: $green;
+	}
+	&:hover {
+		border-bottom: 1px solid $green;
+	}
+	&.inverse {
+		color: $body-bg;
+		&:visited {
+			color: $body-bg;
+		}
+	}
+}
+
+.container {
+	@include grid-row();
+}
+
+section {
+	&.row {
+		position: relative;
+		border-top: 1px solid $lightGray;
+		padding: emCalc(60px) 0;
+		&:first-child {
+			border: none;
+		}
+	}
+}
+
+.header {
+	position: absolute;
+	left: 50%;
+	top: emCalc(-25px);
+	margin-left: emCalc(-25px);
+	font-size: emCalc(30px);
+	background: $green;
+	color: $body-bg;
+	text-align: center;
+	width: emCalc(50px);
+	height: emCalc(50px);
+	border: 10px solid $body-bg;
+	line-height: emCalc(36px);
+	@include border-radius(50%);
+}
+
+
+.nickname {
+	font-size: emCalc(40px);
+	font-family: $subheader-font-family;
+	font-weight: $subheader-font-weight;
+	font-style: $subheader-font-style;
+	color: $gray;
+}
+
+#info {
+	h1 {
+		margin-bottom: 0;
+	}
+	img {
+		margin-bottom: emCalc(50px);
+	}
+	.name {
+		margin-bottom: emCalc(40px);
+	}
+	.indent {
+		margin-left: emCalc(35px);
+	}
+	.details {
+		li {
+			margin-bottom: emCalc(10px);
+			&:last-child {
+				margin-bottom: emCalc(60px);
+			}
+			span {
+				margin-right: emCalc(10px);
+			}
+		}
+	}
+}
+
+.branch {
+	text-align: center;
+	font-size: emCalc(60px);
+	margin-bottom: emCalc(10px);
+}
+
+section {
+	.skills {
+		margin-top: emCalc(100px);
+		@include single-transition(all, 2s);
+		&:first-child {
+			margin-top: 0;
+		}
+		&.visible {
+			display: block;
+			@include opacity(1);		
+		}
+		.name {
+			font-size: emCalc(28px);
+		}
+	}
+}
+
+.skill {
+	margin-bottom: emCalc(60px);
+}
+
+ .level-wrap, .level {
+ 	height: emCalc(10px);
+ 	@include border-radius(10px);
+ }
+
+.level-wrap {
+ 	background: $lightGray;	
+}
+
+.level {
+	background: $green;
+	width: 0%;
+	@include single-transition(all, 2s);
+	@include transition-delay(.5s);
+}
+
+.html {
+	.visible & {
+		width: 100%;
+	}
+}
+
+.sass {
+	.visible & {
+		width: 90%;
+	}
+}
+
+.less {
+	.visible & {
+		width: 85%;
+	}
+}
+
+.jquery {
+	.visible & {
+		width: 80%;
+	}
+}
+
+.coffeescript {
+	.visible & {
+		width: 60%;
+	}
+}
+
+.extjs {
+	.visible & {
+		width: 65%;
+	}
+}
+
+.backbonejs {
+	.visible & {
+		width: 40%;
+	}
+}
+
+.nodejs {
+	.visible & {
+		width: 30%;
+	}
+}
+
+.php {
+	.visible & {
+		width: 70%;
+	}
+}
+
+.smarty {
+	.visible & {
+		width: 80%;
+	}
+}
+
+.zend {
+	.visible & {
+		width: 40%;
+	}
+}
+
+.mysql {
+	.visible & {
+		width: 80%;
+	}
+}
+
+.ruby {
+	.visible & {
+		width: 20%;
+	}
+}
+
+.git {
+	.visible & {
+		width: 75%;
+	}
+}
+
+.api-fb {
+	.visible & {
+		width: 70%;
+	}
+}
+
+.api-twitter {
+	.visible & {
+		width: 75%;
+	}
+}
+
+.api-instagram {
+	.visible & {
+		width: 80%;
+	}
+}
+
+.joomla {
+	.visible & {
+		width: 75%;
+	}
+}
+
+.wordpress {
+	.visible & {
+		width: 50%;
+	}
+}
+
+.inventis-cms {
+	.visible & {
+		width: 75%;
+	}
+}
+
+.fork {
+	.visible & {
+		width: 20%;
+	}
+}
+
+.photoshop {
+	.visible & {
+		width: 90%;
+	}
+}
+
+.illustrator {
+	.visible & {
+		width: 80%;
+	}
+}
+
+.indesign {
+	.visible & {
+		width: 80%;
+	}
+}
+
+.flash {
+	.visible & {
+		width: 80%;
+	}
+}
+
+.premiere {
+	.visible & {
+		width: 75%;
+	}
+}
+
+.after-effects {
+	.visible & {
+		width: 65%;
+	}
+}
+
+.dutch {
+	.visible & {
+		width: 100%;
+	}
+}
+
+.english {
+	.visible & {
+		width: 90%;
+	}
+}
+
+.french {
+	.visible & {
+		width: 60%;
+	}
+}
+
+.german {
+	.visible & {
+		width: 20%;
+	}
+}
+
+#education {
+	.year {
+		margin-bottom: emCalc(60px);
+	}
+}
+
+.block-item {
+	margin-bottom: emCalc(60px);
+}
+
+.school {
+	margin: emCalc(20px) 0 emCalc(10px);
+	h4 {
+		a {
+			color: $green;
+		}
+	}
+}
+
+#experience {
+ 	.company {
+		margin-bottom: emCalc(60px);
+	}
+}
+
+.city {
+	&.header3 {
+		margin-bottom: 0;
+	}
+}
+
+article {
+	&.multiple {
+		& > ul {
+			& > li {
+				margin-bottom: emCalc(40px);
+			}
+		}
+	}
+}
+
+.list {
+	[class*="icon-"] {
+		color: $green;
+		position: relative;
+		top: emCalc(3px);
+	}
+}
+
+.location {
+	margin-bottom : emCalc(20px);
+	color: $gray;
+}
+
+#additional {
+
+}
+
+footer {
+	background: $black;
+	color: $body-bg;
+	height: emCalc(160px);
+	a {
+		&:hover {
+			border-bottom: none;
+		}
+	}
+}
+
+.social {
+	font-size: emCalc(36px);
+	text-align: center;
+	line-height: emCalc(80px);
+	li {
+		display: inline;
+		margin-right: 3%;
+		@include opacity(0.4);
+		@include single-transition();	
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			@include opacity(1);
+		}
+	}
+}

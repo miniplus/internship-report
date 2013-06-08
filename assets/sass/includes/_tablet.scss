@@ -1,0 +1,86 @@
+@media #{$small} {
+
+	.commit {
+		@include single-transition();
+		height: emCalc(90px);
+		&.multiline {
+			height: emCalc(150px);
+		}
+		[class*="icon-"] {
+			display: none;
+		}
+		.dot-wrapper, .text {
+			top: -10px;
+		}
+		.dot, .text {
+			@include opacity(0.2);
+			@include single-transition();
+			@include transition-delay(.1s);
+		}
+		.dot {
+			display: block;
+			width: emCalc(30px);
+			height: emCalc(30px);
+			background: $white;
+			border: 7px solid $green;
+			@include scale(0.7, 0.7);
+		}
+		&:hover {
+			.dot {
+				@include scale(1, 1);
+			}
+			.dot, .text {
+				@include opacity(1);				
+			}
+		}
+		&.active {
+			.dot {
+				@include scale(1, 1);
+			}
+			.dot, .text {
+				@include opacity(1);				
+			}
+		}
+		&.education, &.experience, &.additional {
+			//display: none;
+			//@include opacity(0);
+		}
+		&.committed {
+			height: emCalc(80px);
+			@include opacity(1);
+		}
+		&.head {
+			height: 0;
+			@include opacity(1);
+		}
+	}
+
+	.container {
+		max-width: none;
+		padding-left: emCalc(250px);
+	}
+
+	section {
+		&.row {
+			&:first-child {
+				margin-top: emCalc(60px);
+				border-top: 1px solid $lightGray;
+			}
+		}
+	}
+
+	.nav-container {
+		width: emCalc(250px);
+		height: 100%;
+		position: fixed;
+		overflow: auto;
+		.btn {
+			display: none;
+		}
+	}
+
+	.social {
+		margin-left: 250px;
+	}
+
+}

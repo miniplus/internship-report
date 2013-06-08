@@ -1,0 +1,67 @@
+// Colors
+$black: #333;
+$gray: #777;
+$lightGray: #bdc3c7;
+$white: #fff;
+$green: #16a085;
+$timelineColour: rgba(111, 118, 122, 0.2);
+
+$blue: #0086DF;
+
+
+//
+// Foundation Variables
+//
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with brower-based text zoom or user-set defaults.
+$base-font-size: 20px !default;
+
+// $base-line-height is 24px while $base-font-size is 16px
+// $base-line-height: 150%;
+
+// This is the default html and body font-size for the base em value.
+
+// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
+// If you want your base font-size to be a different size and not have it effect grid size too,
+// set the value of $em-base to $base-font-size ($em-base: $base-font-size;)
+$em-base: $base-font-size !default;
+
+// Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px)
+@function emCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1em;
+}
+
+// We use these to control various global styles
+$body-bg: #F5F5F5;;
+
+//
+// Typography Variables
+//
+
+// We use these to control header font styles
+$header-font-family: "ff-tisa-sans-web-pro", Helvetica, Arial, sans-serif;
+$header-font-weight: 700;
+$header-font-style: normal;
+$header-font-color: #222;
+$header-line-height: 1.4;
+$header-top-margin: .2em;
+$header-bottom-margin: .5em;
+$header-text-rendering: optimizeLegibility;
+
+// We use these to control header font sizes
+$h1-font-size: emCalc(48px);
+$h2-font-size: emCalc(48px);
+$h3-font-size: emCalc(27px);
+$h4-font-size: emCalc(23px);
+$h5-font-size: emCalc(18px);
+$h6-font-size: 1em;
+
+// These control how subheaders are styled
+$subheader-font-family: "ff-tisa-web-pro", Helvetica, Arial, sans-serif;
+$subheader-font-weight: 400;
+$subheader-font-style: italic;
+$subheader-line-height: 1.4;
+$subheader-font-color: lighten($header-font-color, 30%);
+$subheader-top-margin: .2em;
+$subheader-bottom-margin: .5em;

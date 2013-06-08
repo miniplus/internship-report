@@ -1,0 +1,37 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Compass includes
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/opacity";
+@import "compass/css3/transform";
+
+// RESET
+@import "compass/reset";
+
+// Symbolset icon fonts
+@import "includes/ss-social-circle";
+
+// Icomoon font
+@import "includes/icomoon";
+
+// This includes all of the foundation global elements that are needed to work with any of the other files.
+@import "includes/foundation/variables";
+
+// Foundation Components
+@import
+  "includes/foundation/global",
+  "includes/foundation/grid";
+  
+// Responsive styles
+@import "includes/nav";
+@import "includes/mobile";
+@import "includes/tablet";
+@import "includes/desktop";
+@import "includes/fancybox";
+@import "includes/no-js";
+@import "includes/print";
+
+// Utilities
+@import "includes/utilities";

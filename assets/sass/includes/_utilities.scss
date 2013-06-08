@@ -1,0 +1,23 @@
+.rounded {
+	display: inline-block;
+	@include border-radius(50%);
+}
+
+.open {
+	height: auto;
+}
+
+.hide-text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.strike-through {
+	text-decoration: line-through;
+}
