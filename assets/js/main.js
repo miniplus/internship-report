@@ -18,6 +18,7 @@ var sectionPos = [];
 	sectionPos.flickr			= $('#flickr').offset().top -150,
 	sectionPos.zend				= $('#zend').offset().top -150,
 	sectionPos.git				= $('#git').offset().top -150,
+	sectionPos.blog				= $('#blog').offset().top -150,
 	sectionPos.eindreflectie	= $('#eindreflectie').offset().top -150;
 
 function isMobile() {
@@ -113,6 +114,7 @@ var scrollPage = {
 			scrollPage.flickr();
 			scrollPage.zend();
 			scrollPage.git();
+			scrollPage.blog();
 			scrollPage.eindreflectie();
 		});
 
@@ -209,10 +211,18 @@ var scrollPage = {
 	},
 
 	git: function() {
-		if (windw.scrollTop() >= sectionPos.git && windw.scrollTop() < sectionPos.eindreflectie) {
+		if (windw.scrollTop() >= sectionPos.git && windw.scrollTop() < sectionPos.blog) {
 			if (!timeline.find('.git').hasClass('active')) {
 				timeline.find('.active').removeClass('active');
 				timeline.find('.git').addClass('active');
+			}		}
+	},
+
+	blog: function() {
+		if (windw.scrollTop() >= sectionPos.blog && windw.scrollTop() < sectionPos.eindreflectie) {
+			if (!timeline.find('.blog').hasClass('active')) {
+				timeline.find('.active').removeClass('active');
+				timeline.find('.blog').addClass('active');
 			}		}
 	},
 
